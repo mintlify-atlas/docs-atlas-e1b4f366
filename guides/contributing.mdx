@@ -1,0 +1,66 @@
+---
+title: "Contributing to Python Projects"
+description: "Add a new Python mini-project or improve an existing one. Follow the single-file convention and standard library rule to keep the collection accessible."
+---
+
+Contributions are welcome. The goal of this collection is to provide approachable, self-contained Python projects that beginners can download and run immediately — no setup, no dependencies, just Python. Every script you add should fit that same spirit.
+
+## Project conventions
+
+Before writing any code, make sure your project follows these rules:
+
+- **Single `.py` file** — each project lives entirely in one file at the repository root. No packages, no subdirectories, no supporting modules.
+- **Standard library only** — use only modules that ship with Python (`random`, `time`, `os`, `math`, etc.). No `pip install` should ever be required.
+- **Interactive command-line program** — scripts must prompt the user for input, respond meaningfully, and run in a clear loop with an explicit exit condition.
+- **`Title_Case_With_Underscores.py` filename** — match the naming style of existing files: `Fake_Headline_Generator.py`, `Restaurant_Management_System.py`, and so on.
+
+## How to contribute
+
+<Steps>
+  <Step title="Fork the repository on GitHub">
+    Navigate to the repository page and click **Fork** to create your own copy under your GitHub account.
+  </Step>
+  <Step title="Clone your fork">
+    ```bash
+    git clone https://github.com/<your-username>/python_projects.git
+    ```
+
+    Replace `<your-username>` with your GitHub username.
+  </Step>
+  <Step title="Create your script">
+    Add a new `.py` file in the repository root following the conventions above. See the section below on what makes a good mini-project.
+  </Step>
+  <Step title="Test that it runs">
+    ```bash
+    python3 YourScript.py
+    ```
+
+    Run through the full experience: try valid inputs, invalid inputs, and the exit path. Fix anything that crashes or behaves unexpectedly.
+  </Step>
+  <Step title="Open a pull request">
+    Push your branch to your fork and open a pull request against the main repository. In the PR description, explain what your project does and what a user experiences when they run it.
+  </Step>
+</Steps>
+
+## What makes a good mini-project
+
+Not every script is a good fit. The best contributions share these qualities:
+
+- **A clear interactive loop** — the script keeps running and accepting input until the user deliberately quits.
+- **Meaningful feedback** — the program responds to each action in a way that tells the user what happened (a result, a score, a generated output).
+- **Graceful handling of invalid input** — if a user types a letter where a number is expected, the script should explain the problem and ask again rather than crash.
+- **Readable by someone learning Python** — avoid advanced patterns that would confuse a beginner. If you use a less common technique, add a comment explaining it.
+
+## Code style
+
+- Follow [PEP 8](https://peps.python.org/pep-0008/) for formatting: 4-space indentation, spaces around operators, blank lines between functions.
+- Use descriptive variable names (`player_score` rather than `ps`, `user_choice` rather than `uc`).
+- Add a comment above any logic that is not immediately obvious — particularly anything involving `random`, string manipulation, or game state.
+
+<Tip>
+  Read through `Calculator_With_History.py` before writing your script. It demonstrates the expected structure well: clearly named functions, a `try/except` block for bad input, a `while True` main loop with an explicit `break`, and file I/O that degrades gracefully if `history.txt` doesn't exist yet.
+</Tip>
+
+<Note>
+  Pull requests that introduce external dependencies (anything requiring `pip install`) will not be accepted. The zero-install promise is a core part of what makes this collection useful for beginners.
+</Note>

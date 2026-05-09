@@ -1,0 +1,42 @@
+---
+title: "Dice Game: Roll two virtual dice"
+description: "Roll two six-sided dice from your terminal. Type Y to roll again or N to quit. Each roll generates two independent random numbers between 1 and 6."
+---
+
+This script simulates rolling a pair of six-sided dice. Each roll produces two independent random numbers between 1 and 6, printed together as a tuple. You control the pace — roll as many times as you like, then quit when you're done.
+
+## How to run
+
+```bash
+python3 Dice_Game.py
+```
+
+## Gameplay
+
+At each prompt, the game asks `Roll the dice? Y/N:`.
+
+| Input | What happens |
+|-------|-------------|
+| `Y` | Rolls both dice and prints the result |
+| `N` | Exits the program |
+| Anything else | Prints `"Invalid input. Please enter Y or N."` and prompts again |
+
+Each roll generates two independent values using `random.randint(1, 6)`, so every number from 1 to 6 is equally likely for each die.
+
+<Note>
+Input is case-insensitive. The script calls `.lower()` on your input, so `y`, `Y`, `n`, and `N` are all accepted.
+</Note>
+
+## Terminal session example
+
+```text
+Roll the dice? Y/N: y
+(3, 5)You rolled a
+Roll the dice? Y/N: y
+(1, 1)You rolled a
+Roll the dice? Y/N: y
+(6, 2)You rolled a
+Roll the dice? Y/N: maybe
+Invalid input. Please enter Y or N.
+Roll the dice? Y/N: n
+```

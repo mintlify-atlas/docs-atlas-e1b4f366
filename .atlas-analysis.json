@@ -1,0 +1,53 @@
+{
+  "projectType": "general",
+  "projectName": "Python Projects",
+  "projectDescription": "A collection of beginner-friendly Python mini-projects covering games, utilities, and interactive CLI applications.",
+  "theme": "palm",
+  "primaryColor": "#3B82F6",
+  "lightColor": "#EFF6FF",
+  "darkColor": "#1E3A5F",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Projects",
+            "pages": [
+              "projects/calculator",
+              "projects/number-guessing-game",
+              "projects/dice-game",
+              "projects/fake-headline-generator",
+              "projects/restaurant-management-system"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/running-scripts",
+              "guides/contributing"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Calculator with persistent calculation history saved to file",
+    "Number guessing game with random number generation and feedback",
+    "Two-dice rolling game with replay support",
+    "Fake headline generator using randomized subject-action-place combinations",
+    "Interactive restaurant ordering system with a menu and running total"
+  ],
+  "publicApiSurface": [
+    "Calculator_With_History.py: main(), calculate(input_user), show_history(), clear_history(), save_to_history(equation, result)",
+    "Number_Guessing_Game.py: top-level script (no functions)",
+    "Dice_Game.py: top-level script (no functions)",
+    "Fake_Headline_Generator.py: top-level script (no functions)",
+    "Restaurant_Management_System.py: top-level script (no functions)"
+  ]
+}

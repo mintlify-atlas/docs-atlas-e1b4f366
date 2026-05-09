@@ -1,133 +1,65 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
-icon: 'star'
+title: "Python Projects: Beginner Python mini-projects"
+description: "Five standalone Python mini-projects — games, a calculator with history, and a restaurant ordering system. No dependencies needed, just run with python3."
 ---
 
-## Setting up
+Python Projects is a curated set of beginner-friendly command-line applications written in pure Python. Each project is self-contained in a single file — no dependencies to install, no setup required beyond Python itself. Whether you want to play a number guessing game, roll some dice, or practice ordering from a virtual restaurant, every project is ready to run in seconds.
 
-Get your documentation site up and running in minutes.
-
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
-
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Learn what each project does and how this collection is organized.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Get Python installed and run your first project in under two minutes.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="All Projects" icon="folder-open" href="/projects/calculator">
+    Browse all five projects with full usage instructions and code walkthroughs.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Running Scripts" icon="terminal" href="/guides/running-scripts">
+    Learn how to run any Python script from your terminal on any platform.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## What's included
 
-Everything you need to create world-class documentation.
+<CardGroup cols={2}>
+  <Card title="Calculator with History" icon="calculator" href="/projects/calculator">
+    A four-operation calculator that saves every calculation to a file so you can review or clear your history anytime.
+  </Card>
+  <Card title="Number Guessing Game" icon="dice" href="/projects/number-guessing-game">
+    Guess a secret number between 1 and 100. The game gives you "too high" or "too low" hints until you crack it.
+  </Card>
+  <Card title="Dice Game" icon="dice-six" href="/projects/dice-game">
+    Roll two virtual dice and see the result instantly. Keep rolling as many times as you like.
+  </Card>
+  <Card title="Fake Headline Generator" icon="newspaper" href="/projects/fake-headline-generator">
+    Generate absurd breaking-news headlines by randomly combining subjects, actions, and locations.
+  </Card>
+  <Card title="Restaurant Management System" icon="utensils" href="/projects/restaurant-management-system">
+    Browse a menu, add items to your order, and watch your total grow — an interactive ordering experience in the terminal.
+  </Card>
+</CardGroup>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+## Get started
 
-## Make your content agent ready
+<Steps>
+  <Step title="Check your Python version">
+    Open a terminal and run `python3 --version`. You need Python 3.6 or higher.
+  </Step>
+  <Step title="Clone the repository">
+    ```bash
+    git clone https://github.com/muhammadalamzeb/python_projects.git
+    cd python_projects
+    ```
+  </Step>
+  <Step title="Run a project">
+    ```bash
+    python3 Calculator_With_History.py
+    ```
+    Replace the filename with any project you want to try.
+  </Step>
+</Steps>
 
-Make your docs work for humans and AI agents alike.
-
-<Columns cols={2}>
-  <Card
-    title="Prompt component"
-    icon="robot"
-    href="/agent-ready/prompt"
-  >
-    Embed shareable AI prompts readers can copy or open in Cursor.
-  </Card>
-  <Card
-    title="Visibility"
-    icon="eye"
-    href="/agent-ready/visibility"
-  >
-    Show different content to humans and agents reading your docs.
-  </Card>
-  <Card
-    title="Contextual menu"
-    icon="bolt"
-    href="/agent-ready/contextual"
-  >
-    Give readers one-click access to Claude, ChatGPT, Cursor, and more.
-  </Card>
-  <Card
-    title="AI coding tools"
-    icon="wand-magic-sparkles"
-    href="/ai-tools/claude-code"
-  >
-    Set up Claude Code, Cursor, or Windsurf with Mintlify's skill.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Tip>
+  No virtual environment or `pip install` needed — every project uses only Python's standard library.
+</Tip>

@@ -1,0 +1,88 @@
+---
+title: "Calculator with History"
+description: "A command-line calculator supporting +, -, *, / that saves every calculation to history.txt. Review or clear your session history at any time."
+---
+
+This calculator runs entirely in your terminal and supports the four basic arithmetic operations. What sets it apart from a one-shot calculator is persistence: every successful calculation is appended to `history.txt`, so you can review past results at any time during your session or across sessions.
+
+## How to run
+
+```bash
+python3 Calculator_With_History.py
+```
+
+## Input format and commands
+
+At the `Calculation->` prompt, enter either a math expression or one of the built-in commands.
+
+### Calculations
+
+Use the format `<number> <operator> <number>`, with spaces between each part.
+
+| Component | Details |
+|-----------|---------|
+| Numbers | Any integer or decimal (e.g., `5`, `3.14`) |
+| Operators | `+` (add), `-` (subtract), `*` (multiply), `/` (divide) |
+| Example inputs | `5 + 3`, `10 / 2`, `7.5 * 4`, `100 - 33` |
+
+### Commands
+
+| Command | What it does |
+|---------|-------------|
+| `History` | Prints all saved calculations, newest first |
+| `Clear` | Wipes the contents of `history.txt` |
+| `Quit` | Exits the program |
+
+Commands are case-insensitive — the script calls `.capitalize()` internally, so `history`, `HISTORY`, and `History` all work.
+
+## Terminal session example
+
+```text
+------------- CALCULATOR -----------------
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 5 + 3
+Result: 8
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 10 / 2
+Result: 5
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 7.5 * 4
+Result: 30
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): History
+7.5 * 4=30
+10 / 2=5
+5 + 3=8
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): Clear
+History cleared!
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): Quit
+```
+
+## How history works
+
+Each successful calculation is saved to `history.txt` in the directory where you ran the script. Entries are written one per line using the format:
+
+```text
+equation=result
+```
+
+For example:
+
+```text
+5 + 3=8
+10 / 2=5
+7.5 * 4=30
+```
+
+When you run the `History` command, entries are printed in reverse order (newest first) so the most recent calculation is always at the top. If no calculations have been saved yet, the program prints `"No history yet!"`. If the file does not exist at all, it prints `"No history file found!"`.
+
+<Note>
+`history.txt` is created relative to your current working directory, not the script's location. If you run the script from different directories, each directory gets its own separate `history.txt` file.
+</Note>
+
+## Error handling
+
+| Situation | Message printed |
+|-----------|----------------|
+| Division by zero (e.g., `5 / 0`) | `Error! Division by zero is not allowed.` |
+| Wrong number of parts (e.g., `5 +`) | `Invalid format! Use: number operator number` |
+| Non-numeric input (e.g., `abc + 3`) | `Invalid input! Please enter valid numbers.` |
+| Unsupported operator (e.g., `5 ^ 3`) | `Invalid operator! Use +, -, *, or /` |
+
+Errors do not exit the program — the prompt appears again after each error message.

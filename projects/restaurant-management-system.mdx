@@ -1,0 +1,69 @@
+---
+title: "Restaurant Management System"
+description: "An interactive terminal ordering system for Sukkur IBA Restaurant. Browse a five-item menu, place orders, and track your running total in PKR."
+---
+
+This script simulates a simple restaurant ordering experience in your terminal. When you launch it, the full menu is displayed. You then place items one at a time — each addition updates your running total — and finish when you're ready to close the order.
+
+## How to run
+
+```bash
+python3 Restaurant_Management_System.py
+```
+
+## Menu
+
+| Item | Price (PKR) |
+|------|------------|
+| Pizza | 40 |
+| Pasta | 50 |
+| Burger | 60 |
+| Salad | 70 |
+| Coffee | 80 |
+
+## Ordering flow
+
+<Steps>
+  <Step title="View the menu">
+    The script prints the full menu with prices as soon as it starts.
+  </Step>
+  <Step title="Place an item">
+    Type an item name at the `Please place your order:` prompt. If the item is in the menu, its price is added to your running total and a confirmation is printed.
+  </Step>
+  <Step title="Continue or finish">
+    After each item, you are asked `Do you want to order something else? (y/n):`. Type `y` to add another item or `n` to end the session.
+  </Step>
+</Steps>
+
+<Note>
+Item names are case-insensitive. The script calls `.capitalize()` on your input, so `pizza`, `PIZZA`, and `Pizza` are all treated the same.
+</Note>
+
+## Terminal session example
+
+```text
+Welcome to Sukkur IBA Restaurant
+Pizza costs 40 PKR
+Pasta costs 50 PKR
+Burger costs 60 PKR
+Salad costs 70 PKR
+Coffee costs 80 PKR
+Please place your order: pizza
+Your item Pizza has been added to the order
+Total Amount: 40 PKR
+Do you want to order something else? (y/n): y
+Please place your order: coffee
+Your item Coffee has been added to the order
+Total Amount: 120 PKR
+Do you want to order something else? (y/n): n
+```
+
+## Error handling
+
+If you type an item that is not in the menu, the script prints:
+
+```text
+Sorry, we do not have this item in our menu
+```
+
+The order prompt then repeats immediately — your running total is unchanged and no item is added.

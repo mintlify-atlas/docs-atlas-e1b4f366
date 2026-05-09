@@ -1,0 +1,111 @@
+---
+title: "Running Python scripts from the terminal"
+description: "Learn how to open a terminal, navigate to the project folder, and run any Python script on macOS, Linux, or Windows using the python3 command."
+---
+
+Every project in this collection runs directly from a terminal — no graphical launcher required. You start each script with the `python3` command followed by the filename, interact with it through the command line, and stop it when you're done.
+
+## Open a terminal for your operating system
+
+<Tabs>
+  <Tab title="macOS">
+    Open **Finder**, then go to **Applications → Utilities → Terminal**. Alternatively, press `Cmd + Space`, type `Terminal`, and press `Enter`.
+
+    Once open, navigate to the folder containing the scripts:
+
+    ```bash
+    cd path/to/python_projects
+    ```
+
+    Run any script with:
+
+    ```bash
+    python3 Calculator_With_History.py
+    ```
+  </Tab>
+  <Tab title="Linux">
+    Open your terminal emulator. On most desktop environments you can right-click the desktop and select **Open Terminal**, or find it in your application menu.
+
+    Navigate to the project folder:
+
+    ```bash
+    cd path/to/python_projects
+    ```
+
+    Run any script with:
+
+    ```bash
+    python3 Dice_Game.py
+    ```
+  </Tab>
+  <Tab title="Windows">
+    Open **Command Prompt** (search for `cmd` in the Start menu) or **PowerShell** (search for `powershell`).
+
+    Navigate to the project folder using `cd`:
+
+    ```bash
+    cd C:\path\to\python_projects
+    ```
+
+    Run any script with:
+
+    ```bash
+    python3 Number_Guessing_Game.py
+    ```
+
+    If `python3` is not recognized, try `py` or `python` instead:
+
+    ```bash
+    py Number_Guessing_Game.py
+    ```
+  </Tab>
+</Tabs>
+
+<Note>
+  On some Windows systems, `python3` may not be available. Use `py` or `python` as a substitute. All three invoke the same interpreter when Python is installed via the official installer.
+</Note>
+
+## General workflow
+
+<Steps>
+  <Step title="Open your terminal">
+    Use the instructions for your operating system above to launch a terminal window.
+  </Step>
+  <Step title="Navigate to the project directory">
+    ```bash
+    cd path/to/python_projects
+    ```
+
+    Replace `path/to/python_projects` with the actual path where you saved the scripts. Use `ls` (macOS/Linux) or `dir` (Windows) to confirm the `.py` files are listed.
+  </Step>
+  <Step title="Verify your Python version">
+    ```bash
+    python3 --version
+    ```
+
+    You need Python 3.6 or later. The output should look like `Python 3.x.x`. If Python is not found, install it from [python.org](https://python.org).
+  </Step>
+  <Step title="Run a script">
+    ```bash
+    python3 Calculator_With_History.py
+    ```
+
+    Substitute any other filename to run a different project. The script starts immediately and prompts you for input.
+  </Step>
+</Steps>
+
+## Stopping a script
+
+Press `Ctrl+C` at any time to interrupt a running script and return to the terminal prompt. Most scripts also have a built-in exit — the calculator accepts `Quit`, the dice game and restaurant system accept `n` — but `Ctrl+C` works universally across all of them.
+
+## Checking that Python is installed
+
+```bash
+python3 --version
+```
+
+If this command prints a version number (e.g., `Python 3.11.4`), you're ready to run any script in this collection. If it returns an error like `command not found`, install Python from [python.org/downloads](https://www.python.org/downloads/) and follow the installer instructions for your operating system.
+
+<Tip>
+  In the terminal, press the `Tab` key while typing a filename to autocomplete it. For example, type `python3 Cal` and press `Tab` — the terminal will complete it to `python3 Calculator_With_History.py`, saving you from typing the full name.
+</Tip>

@@ -1,0 +1,76 @@
+---
+title: "Fake Headline Generator"
+description: "Generate random breaking-news headlines by mixing subjects, actions, and locations. A fun creative writing tool that produces a new headline every second."
+---
+
+This script produces absurd breaking-news headlines by randomly combining a subject, an action verb, and a place or thing. It runs in a loop — printing one headline, waiting one second, then asking if you want another. Use it for creative writing prompts, placeholder content, or a quick laugh.
+
+## How to run
+
+```bash
+python3 Fake_Headline_Generator.py
+```
+
+## How headlines are built
+
+Each headline follows the pattern:
+
+```text
+Breaking News: [subject] [action] [place/thing]
+```
+
+The three components are picked independently at random from their respective lists on every iteration.
+
+### Subjects
+
+- Shahrukh Khan
+- Virat Kohli
+- Nirmala Sitharaman
+- A Cat
+- A Group of Monkeys
+- Prime Minister
+- Auto Rickshaw Driver from Sukkur
+
+### Actions
+
+- launches
+- cancels
+- dances with
+- eats
+- declares war on
+- orders
+- celebrates
+
+### Places / things
+
+- at Red Fort
+- in Sukkur Local Train
+- a plate of Samosa
+- inside parliament
+- sukkur local market
+- during a cricket match
+- a plate of biryani
+
+<Tip>
+With 7 subjects, 7 actions, and 7 places/things, there are 7 × 7 × 7 = **343 possible unique headline combinations**.
+</Tip>
+
+## How the loop works
+
+1. A headline is printed immediately when the script starts.
+2. The script pauses for **1 second** (`time.sleep(1)`).
+3. You are prompted: `Continue Y/N:`
+4. Type `Y` (or `y`) to generate another headline, or anything else to exit.
+
+## Sample output
+
+```text
+Breaking News: A Cat declares war on a plate of biryani
+Continue Y/N: Y
+Breaking News: Prime Minister eats inside parliament
+Continue Y/N: Y
+Breaking News: Auto Rickshaw Driver from Sukkur launches at Red Fort
+Continue Y/N: Y
+Breaking News: Virat Kohli dances with during a cricket match
+Continue Y/N: N
+```

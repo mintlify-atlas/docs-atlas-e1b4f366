@@ -1,0 +1,58 @@
+---
+title: "Number Guessing Game"
+description: "Guess a randomly chosen integer between 1 and 100. After each attempt the game responds with 'Too high' or 'Too low' until you find the exact number."
+---
+
+At the start of each run, the program picks a random integer between 1 and 100. Your goal is to guess it using the "too high" or "too low" feedback after each attempt. There is no guess limit — play continues until you find the number.
+
+## How to run
+
+```bash
+python3 Number_Guessing_Game.py
+```
+
+## Gameplay
+
+<Steps>
+  <Step title="Start the game">
+    Run the script. A random number between 1 and 100 is chosen immediately and kept secret.
+  </Step>
+  <Step title="Enter a guess">
+    Type an integer at the prompt. The valid guessing range is **strictly between 1 and 100** — the game rejects values of exactly 1 or 100 and anything outside that range with the message `"Please enter a number between 1 and 100"`.
+  </Step>
+  <Step title="Read the feedback">
+    - If your guess is too high: `Too high`
+    - If your guess is too low: `Too low`
+    - If your guess matches: `You win!` and the game ends.
+  </Step>
+</Steps>
+
+## Terminal session example
+
+```text
+Guess a number between 1 and 100: 50
+Too low
+Guess a number between 1 and 100: 75
+Too high
+Guess a number between 1 and 100: 62
+Too low
+Guess a number between 1 and 100: 68
+Too high
+Guess a number between 1 and 100: 65
+You win!
+```
+
+<Note>
+Entering a non-numeric value (e.g., `hello`) prints `"Value error!"` but the game continues — you can keep guessing without restarting.
+</Note>
+
+## Tips for winning efficiently
+
+The fastest strategy is a **binary search**: always guess the midpoint of the remaining range.
+
+1. Start with `50` (midpoint of 1–100).
+2. If "Too low", your next guess is `75` (midpoint of 51–100).
+3. If "Too high", your next guess is `25` (midpoint of 1–49).
+4. Keep halving the range after each clue.
+
+This approach finds any number in at most **7 guesses**, since log₂(100) ≈ 6.6.

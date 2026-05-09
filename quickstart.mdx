@@ -1,81 +1,138 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
-icon: 'rocket'
+title: "Get started with Python Projects"
+description: "Clone the repository and run your first Python project in under two minutes. No dependencies or virtual environments needed — just Python 3.6+."
 ---
 
-## Get started in three steps
+Every project in this collection runs with a single `python3` command. This page walks you from a fresh terminal to a running calculator session in under two minutes.
 
-Get your documentation site running locally and make your first customization.
+<Steps>
+  <Step title="Verify Python is installed">
+    Open your terminal and run:
 
-### Step 1: Set up your local environment
+    ```bash
+    python3 --version
+    ```
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+    You should see output like:
 
-### Step 2: Deploy your changes
+    ```text
+    Python 3.11.4
+    ```
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+    Any version **3.6 or higher** works. If the command is not found, download Python from [python.org](https://www.python.org/downloads/) and re-open your terminal.
+  </Step>
+  <Step title="Clone the repository">
+    ```bash
+    git clone https://github.com/muhammadalamzeb/python_projects.git
+    cd python_projects
+    ```
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    This downloads all five scripts into a single `python_projects` directory. No additional setup is needed.
+  </Step>
+  <Step title="Run your first project">
+    Start the calculator:
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+    ```bash
+    python3 Calculator_With_History.py
+    ```
 
-### Step 3: Go live
+    The prompt appears immediately. Try an expression, check your history, then quit:
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+    ```text
+    ------------- CALCULATOR -----------------
+    Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 5 + 3
+    Result: 8
+    Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 12 * 4
+    Result: 48
+    Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): History
+    12 * 4=48
+    5 + 3=8
+    Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): Quit
+    ```
+
+    Supported operators are `+`, `-`, `*`, and `/`. Always include a space between the number, operator, and second number (for example, `10 / 2`, not `10/2`).
+  </Step>
+  <Step title="Explore the other projects">
+    Each script launches the same way. Run any of the following from inside the `python_projects` directory:
+
+    ```bash
+    python3 Number_Guessing_Game.py
+    ```
+
+    ```bash
+    python3 Dice_Game.py
+    ```
+
+    ```bash
+    python3 Fake_Headline_Generator.py
+    ```
+
+    ```bash
+    python3 Restaurant_Management_System.py
+    ```
+  </Step>
+</Steps>
+
+## Running the calculator on different platforms
+
+The command is identical on every platform — only the way you open a terminal differs.
+
+<CodeGroup>
+
+```bash macOS and Linux
+python3 Calculator_With_History.py
+```
+
+```bash Windows (Command Prompt)
+python3 Calculator_With_History.py
+```
+
+```bash Windows (PowerShell)
+python3 Calculator_With_History.py
+```
+
+</CodeGroup>
+
+## Example calculator session
+
+Below is a complete session showing arithmetic, the `History` command, the `Clear` command, and a clean exit.
+
+```text
+------------- CALCULATOR -----------------
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 100 / 4
+Result: 25
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 9 - 3
+Result: 6
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): History
+9 - 3=6
+100 / 4=25
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): Clear
+History cleared!
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): 7 * 8
+Result: 56
+Calculation-> ( + - / * ) OR COMMAND (History, Clear, Quit): Quit
+```
+
+<Tip>
+  The calculator saves your history to a file called `history.txt` in whichever directory you run the script from. If you run it from your home directory, the file appears there. Move to a dedicated project folder first if you want to keep history files organised.
+</Tip>
 
 ## Next steps
 
-Now that you have your docs running, explore these key features:
-
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="Calculator with History" icon="calculator" href="/projects/calculator">
+    Full usage guide, command reference, and code walkthrough for the calculator.
+  </Card>
+  <Card title="Number Guessing Game" icon="circle-question" href="/projects/number-guessing-game">
+    How the random number loop and input validation work under the hood.
+  </Card>
+  <Card title="Dice Game" icon="dice" href="/projects/dice-game">
+    Roll two dice and understand how `random.randint` drives the game.
+  </Card>
+  <Card title="Fake Headline Generator" icon="newspaper" href="/projects/fake-headline-generator">
+    See how list sampling creates endlessly varied breaking-news headlines.
+  </Card>
+  <Card title="Restaurant Management System" icon="utensils" href="/projects/restaurant-management-system">
+    Browse the menu, place an order, and see how the running total is tracked.
+  </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

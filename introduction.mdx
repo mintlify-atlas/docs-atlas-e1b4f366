@@ -1,0 +1,42 @@
+---
+title: "Introduction to Python Projects"
+description: "Python Projects is a collection of five beginner-friendly command-line apps covering games, a calculator, and a restaurant system — all in pure Python."
+---
+
+Python Projects is a collection of five standalone command-line applications, each contained in a single `.py` file. Every script runs with one command — no package installation, no virtual environments, no configuration files. All five projects use only Python's standard library, so the only requirement is Python itself.
+
+Whether you want to explore how a simple game loop works, see how user input is validated, or understand how data can be saved to a file between sessions, each project demonstrates a different set of core Python concepts in a focused, readable script.
+
+## Projects in this collection
+
+<CardGroup cols={2}>
+  <Card title="Calculator with History" icon="calculator" href="/projects/calculator">
+    A four-operation calculator that evaluates space-separated expressions like `5 + 3` and logs every result to `history.txt`. Review or clear your history at any time from the prompt.
+  </Card>
+  <Card title="Number Guessing Game" icon="circle-question" href="/projects/number-guessing-game">
+    The script picks a random number between 1 and 100. Enter guesses and receive "Too high" or "Too low" feedback until you find the exact number.
+  </Card>
+  <Card title="Dice Game" icon="dice" href="/projects/dice-game">
+    Rolls two six-sided dice using `random.randint` and displays the result. Type `y` to roll again or `n` to stop — as many rounds as you like.
+  </Card>
+  <Card title="Fake Headline Generator" icon="newspaper" href="/projects/fake-headline-generator">
+    Randomly combines subjects, actions, and places to produce absurd breaking-news headlines. Keep generating by typing `Y`, or stop with any other input.
+  </Card>
+  <Card title="Restaurant Management System" icon="utensils" href="/projects/restaurant-management-system">
+    Browse a five-item menu (Pizza, Pasta, Burger, Salad, Coffee), add items to your order, and see the running total in PKR. Confirm when you are done to see your final bill.
+  </Card>
+</CardGroup>
+
+## Prerequisites
+
+You need the following before running any project:
+
+- **Python 3.6 or later** — check with `python3 --version`
+- **Any operating system** — macOS, Linux, and Windows are all supported
+- **No third-party packages** — every script imports only from the Python standard library (`random`, file I/O builtins)
+
+No `pip install`, no `requirements.txt`, no virtual environment setup is required.
+
+<Note>
+  All five scripts are fully self-contained single files. You can copy any one of them to a different directory and run it independently — it carries no dependencies on the other files in the repository.
+</Note>
